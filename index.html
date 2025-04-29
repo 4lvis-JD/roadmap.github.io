@@ -50,6 +50,19 @@
       cursor: pointer;
       font-size: 1.5rem;
     }
+    .video-links {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+    .video-links a {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .video-links a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -75,128 +88,137 @@
   </table>
 
   <section>
-    <h2>Etapa 1: Fundamentos de la Web</h2>
-    <p><strong>Objetivo:</strong> Entender qué es la web, cómo funcionan los navegadores y los servidores.</p>
-    <ul>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank">Cómo funciona la web</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/Common_questions/Internet_vs_WWW" target="_blank">Internet y WWW</a></li>
-    </ul>
-    <p><strong>Tareas prácticas:</strong></p>
-    <ul>
-      <li>Crear tu primer pequeño archivo HTML y abrirlo en el navegador.</li>
-      <li>Inspeccionar páginas web conocidas usando las herramientas de desarrollador (DevTools).</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Etapa 2: HTML Básico y Semántico</h2>
-    <p><strong>Objetivo:</strong> Crear estructuras web sólidas y accesibles.</p>
-    <ul>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML" target="_blank">Introducción a HTML</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure" target="_blank">Estructura de una página web HTML</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Glossary/Semantics#sem%C3%A1ntica_en_html" target="_blank">HTML Semántico</a></li>
-    </ul>
-    <p><strong>Tareas prácticas:</strong></p>
-    <ul>
-      <li>Crear una página básica con: Encabezados, Párrafos, Listas, Imágenes, Hipervínculos.</li>
-      <li>Usar etiquetas semánticas como <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, etc.</li>
-    </ul>
+    <h2>Etapa 1: Fundamentos de la Web (30/04/2025 - 01/05/2025)</h2>
     <dl>
-      <dt><strong>¿Qué verás aquí?</strong></dt>
-      <dd>Aprenderás la estructura esencial del HTML y cómo organizar el contenido con significado usando etiquetas semánticas.</dd>
+      <dt>¿Qué verás aquí?</dt>
+      <dd>Qué es la web, cómo funciona un navegador, y los pilares de una página: HTML, CSS y JavaScript.</dd>
+      <dt>Recurso principal:</dt>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web" target="_blank">Comenzando con la Web - MDN</a></dd>
+      <div class="video-links">
+        <a href="https://www.youtube.com/watch?v=F-sjx-zDzaI" target="_blank">¿Cómo funciona Internet?</a>
+        <a href="https://www.youtube.com/watch?v=z3o0Xb92tS4" target="_blank">Cómo funciona un navegador web</a>
+      </div>
     </dl>
   </section>
 
   <section>
-    <h2>Etapa 3: CSS Básico (Estilizando la Web)</h2>
-    <p><strong>Objetivo:</strong> Hacer páginas atractivas y bien estructuradas.</p>
-    <ul>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">Introducción a CSS</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Syntax" target="_blank">Sintaxis de CSS</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">Selectores de CSS</a></li>
-    </ul>
-    <p><strong>Tareas prácticas:</strong></p>
-    <ul>
-      <li>Crear hojas de estilo externas.</li>
-      <li>Aplicar colores, fuentes, márgenes, padding.</li>
-      <li>Diseñar un layout básico usando <code>flexbox</code>.</li>
-    </ul>
+    <h2>Etapa 2: HTML Básico y Semántico (02/05/2025 - 05/05/2025)</h2>
     <dl>
-      <dt><strong>¿Qué verás aquí?</strong></dt>
-      <dd>Estilos visuales, jerarquía, clases, selectores y disposición de elementos en pantalla.</dd>
+      <dt>¿Qué verás aquí?</dt>
+      <dd>Estructura básica HTML, etiquetas semánticas, listas, enlaces, imágenes, tablas, formularios.</dd>
+      <dt>Recurso principal:</dt>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/HTML" target="_blank">Aprende HTML - MDN</a></dd>
+      <div class="video-links">
+        <a href="https://www.youtube.com/watch?v=plpR3-n3OVA" target="_blank">HTML desde cero</a>
+        <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank">Etiquetas semánticas</a>
+      </div>
     </dl>
   </section>
 
   <section>
-    <h2>Etapa 4: JavaScript Fundamental</h2>
-    <p><strong>Objetivo:</strong> Entender la lógica, interacción y comportamiento en la web.</p>
-    <ul>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank">Primeros pasos con JavaScript</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions" target="_blank">Funciones</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">Eventos en el DOM</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Manipulating_documents" target="_blank">Manipulación del DOM</a></li>
-    </ul>
-    <p><strong>Tareas prácticas:</strong></p>
-    <ul>
-      <li>Mostrar alertas, manipular textos dinámicamente.</li>
-      <li>Agregar interactividad (botones que cambian texto, ocultan elementos, etc.).</li>
-    </ul>
+    <h2>Etapa 3: CSS Básico (06/05/2025 - 09/05/2025)</h2>
+    <dl>
+      <dt>¿Qué verás aquí?</dt>
+      <dd>Estilos, selectores, propiedades básicas, colores, fuentes, modelo de caja.</dd>
+      <dt>Recurso principal:</dt>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS" target="_blank">Aprende CSS - MDN</a></dd>
+      <div class="video-links">
+        <a href="https://www.youtube.com/watch?v=1uN5g0D73As" target="_blank">Curso básico de CSS</a>
+        <a href="https://www.youtube.com/watch?v=OEV8gMkCHXQ" target="_blank">Modelo de caja explicado</a>
+      </div>
+    </dl>
   </section>
 
   <section>
-    <h2>Etapa 5: Responsive Design</h2>
-    <p><strong>Objetivo:</strong> Que tus páginas se vean bien en dispositivos móviles.</p>
-    <ul>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Responsive Design Basics</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">Media Queries</a></li>
-    </ul>
-    <p><strong>Tareas prácticas:</strong></p>
-    <ul>
-      <li>Adaptar una página para que se vea bien en móvil y escritorio.</li>
-    </ul>
+    <h2>Etapa 4: JavaScript Fundamental (10/05/2025 - 14/05/2025)</h2>
+    <dl>
+      <dt>¿Qué verás aquí?</dt>
+      <dd>Variables, operadores, estructuras de control, funciones, eventos, DOM.</dd>
+      <dt>Recurso principal:</dt>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript" target="_blank">Aprende JavaScript - MDN</a></dd>
+      <div class="video-links">
+        <a href="https://www.youtube.com/watch?v=z95mZVUcJ-E" target="_blank">Curso JavaScript desde cero</a>
+        <a href="https://www.youtube.com/watch?v=GJXXZpZxP2I" target="_blank">Manipular el DOM con JS</a>
+      </div>
+    </dl>
   </section>
 
   <section>
-    <h2>Etapa 6: Accesibilidad Web (A11y)</h2>
-    <p><strong>Objetivo:</strong> Hacer sitios inclusivos para personas con discapacidades.</p>
-    <ul>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility/What_is_accessibility" target="_blank">Accesibilidad web</a></li>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility/HTML" target="_blank">Accesibilidad en HTML</a></li>
-    </ul>
-    <p><strong>Tareas prácticas:</strong></p>
-    <ul>
-      <li>Usar etiquetas correctas (<code>alt</code> en imágenes, roles, navegación por teclado).</li>
-    </ul>
+    <h2>Etapa 5: Responsive Design (15/05/2025 - 16/05/2025)</h2>
+    <dl>
+      <dt>¿Qué verás aquí?</dt>
+      <dd>Diseño adaptativo, media queries, diseño fluido, viewport, Flexbox.</dd>
+      <dt>Recurso principal:</dt>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Responsive Design - MDN</a></dd>
+      <div class="video-links">
+        <a href="https://www.youtube.com/watch?v=5U8kJJWkQfI" target="_blank">Diseño responsive con CSS</a>
+      </div>
+    </dl>
   </section>
 
   <section>
-    <h2>Etapa 7: Git y GitHub</h2>
-    <p><strong>Objetivo:</strong> Controlar versiones de tus proyectos.</p>
-    <ul>
-      <li><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/GitHub" target="_blank">Git básico en MDN</a></li>
-    </ul>
-    <p><strong>Tareas prácticas:</strong></p>
-    <ul>
-      <li>Crear un repositorio Git.</li>
-      <li>Subir tus proyectos a GitHub.</li>
-    </ul>
+    <h2>Etapa 6: Accesibilidad Web (17/05/2025 - 18/05/2025)</h2>
+    <dl>
+      <dt>¿Qué verás aquí?</dt>
+      <dd>Buenas prácticas para personas con discapacidades, ARIA, contraste, navegación con teclado.</dd>
+      <dt>Recurso principal:</dt>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility" target="_blank">Accesibilidad Web - MDN</a></dd>
+      <div class="video-links">
+        <a href="https://www.youtube.com/watch?v=WxZPTsPc6QY" target="_blank">Accesibilidad web explicada</a>
+      </div>
+    </dl>
   </section>
 
   <section>
-    <h2>Etapa 8: Construcción de Portafolio</h2>
-    <p><strong>Objetivo:</strong> Mostrar tus habilidades al mundo.</p>
-    <ul>
-      <li>Una landing page de producto.</li>
-      <li>Un pequeño blog personal.</li>
-      <li>Una galería interactiva de imágenes.</li>
-      <li>Un formulario funcional con validación básica en JS.</li>
-    </ul>
+    <h2>Etapa 7: Git y GitHub (19/05/2025 - 20/05/2025)</h2>
+    <dl>
+      <dt>¿Qué verás aquí?</dt>
+      <dd>Control de versiones con Git, flujo básico, comandos esenciales, trabajo con repositorios remotos.</dd>
+      <dt>Recurso principal:</dt>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/GitHub" target="_blank">Git y GitHub - MDN</a></dd>
+      <div class="video-links">
+        <a href="https://www.youtube.com/watch?v=HiXLkL42tMU" target="_blank">Git y GitHub desde cero</a>
+      </div>
+    </dl>
   </section>
-  
+
+  <section>
+    <h2>Etapa 8: Construcción de Portafolio (21/05/2025 - 22/05/2025)</h2>
+    <dl>
+      <dt>¿Qué verás aquí?</dt>
+      <dd>Diseñar y construir un sitio personal que muestre tus habilidades y proyectos.</dd>
+      <dt>Recurso principal:</dt>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/Deployment" target="_blank">Publica tu sitio - MDN</a></dd>
+      <div class="video-links">
+        <a href="https://www.youtube.com/watch?v=pJHh9f4tA10" target="_blank">Cómo crear tu portafolio web</a>
+        <a href="https://www.youtube.com/watch?v=sKFW7gK95hE" target="_blank">Subir tu página a Netlify</a>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>¿Y ahora qué?</h2>
+    <p>¡Felicidades por llegar hasta aquí! Esta hoja de ruta cubre los fundamentos sólidos que necesita un desarrollador Front-End junior. Aquí tienes algunos consejos para seguir creciendo:</p>
+    <ul>
+      <li><strong>Profundiza en JavaScript:</strong> Aprende sobre asincronía, fetch API, módulos, ES6+ y promesas.</li>
+      <li><strong>Explora frameworks:</strong> React es uno de los más usados, pero también puedes mirar Vue o Svelte.</li>
+      <li><strong>Aprende testing básico:</strong> Herramientas como Jest o pruebas unitarias pueden ayudarte a escribir mejor código.</li>
+      <li><strong>Contribuye a proyectos:</strong> Participa en proyectos open source o haz pequeños retos de programación.</li>
+      <li><strong>Haz networking:</strong> Comparte tus avances en Twitter, GitHub o LinkedIn y sigue aprendiendo en comunidad.</li>
+    </ul>
+    <p>Recursos adicionales recomendados:</p>
+    <ul>
+      <li><a href="https://roadmap.sh/frontend" target="_blank">Roadmap Frontend - roadmap.sh</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn" target="_blank">MDN Web Docs - Aprende Desarrollo Web</a></li>
+      <li><a href="https://frontendmentor.io" target="_blank">Frontend Mentor - Retos prácticos</a></li>
+      <li><a href="https://www.youtube.com/@midulive" target="_blank">Canal YouTube de midudev</a></li>
+    </ul>
+    <p>🚀 ¡Sigue construyendo, equivocándote y aprendiendo! La práctica constante es tu mejor aliada.</p>
+  </section>
+
   <script>
     const cells = document.querySelectorAll('.checkbox-cell');
 
-    // Cargar progreso guardado
     cells.forEach((cell, index) => {
       const saved = localStorage.getItem('progress-' + index);
       if (saved === '✅') {
@@ -204,7 +226,6 @@
       }
     });
 
-    // Guardar al hacer clic
     cells.forEach((cell, index) => {
       cell.addEventListener('click', () => {
         cell.textContent = cell.textContent === '✅' ? '⬜' : '✅';
