@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruta de Estudio Front-End Junior</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      padding: 2rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    section {
+      background-color: #fff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #d63384;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .checkbox-cell {
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ruta de Estudio Front-End Junior (Basada en MDN)</h1>
+
+  <table id="progressTable">
+    <thead>
+      <tr>
+        <th>Etapa</th>
+        <th>Completado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Fundamentos de la Web</td><td class="checkbox-cell">⬜</td></tr>
+      <tr><td>HTML Básico y Semántico</td><td class="checkbox-cell">⬜</td></tr>
+      <tr><td>CSS Básico</td><td class="checkbox-cell">⬜</td></tr>
+      <tr><td>JavaScript Fundamental</td><td class="checkbox-cell">⬜</td></tr>
+      <tr><td>Responsive Design</td><td class="checkbox-cell">⬜</td></tr>
+      <tr><td>Accesibilidad Web</td><td class="checkbox-cell">⬜</td></tr>
+      <tr><td>Git y GitHub</td><td class="checkbox-cell">⬜</td></tr>
+      <tr><td>Construcción de Portafolio</td><td class="checkbox-cell">⬜</td></tr>
+    </tbody>
+  </table>
+
+  <section>
+    <h2>Etapa 1: Fundamentos de la Web</h2>
+    <p><strong>Objetivo:</strong> Entender qué es la web, cómo funcionan los navegadores y los servidores.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank">Cómo funciona la web</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/Common_questions/Internet_vs_WWW" target="_blank">Internet y WWW</a></li>
+    </ul>
+    <p><strong>Tareas prácticas:</strong></p>
+    <ul>
+      <li>Crear tu primer pequeño archivo HTML y abrirlo en el navegador.</li>
+      <li>Inspeccionar páginas web conocidas usando las herramientas de desarrollador (DevTools).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Etapa 2: HTML Básico y Semántico</h2>
+    <p><strong>Objetivo:</strong> Crear estructuras web sólidas y accesibles.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML" target="_blank">Introducción a HTML</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure" target="_blank">Estructura de una página web HTML</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Glossary/Semantics#sem%C3%A1ntica_en_html" target="_blank">HTML Semántico</a></li>
+    </ul>
+    <p><strong>Tareas prácticas:</strong></p>
+    <ul>
+      <li>Crear una página básica con: Encabezados, Párrafos, Listas, Imágenes, Hipervínculos.</li>
+      <li>Usar etiquetas semánticas como <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, etc.</li>
+    </ul>
+    <dl>
+      <dt><strong>¿Qué verás aquí?</strong></dt>
+      <dd>Aprenderás la estructura esencial del HTML y cómo organizar el contenido con significado usando etiquetas semánticas.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Etapa 3: CSS Básico (Estilizando la Web)</h2>
+    <p><strong>Objetivo:</strong> Hacer páginas atractivas y bien estructuradas.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">Introducción a CSS</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Syntax" target="_blank">Sintaxis de CSS</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">Selectores de CSS</a></li>
+    </ul>
+    <p><strong>Tareas prácticas:</strong></p>
+    <ul>
+      <li>Crear hojas de estilo externas.</li>
+      <li>Aplicar colores, fuentes, márgenes, padding.</li>
+      <li>Diseñar un layout básico usando <code>flexbox</code>.</li>
+    </ul>
+    <dl>
+      <dt><strong>¿Qué verás aquí?</strong></dt>
+      <dd>Estilos visuales, jerarquía, clases, selectores y disposición de elementos en pantalla.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Etapa 4: JavaScript Fundamental</h2>
+    <p><strong>Objetivo:</strong> Entender la lógica, interacción y comportamiento en la web.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank">Primeros pasos con JavaScript</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions" target="_blank">Funciones</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">Eventos en el DOM</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Manipulating_documents" target="_blank">Manipulación del DOM</a></li>
+    </ul>
+    <p><strong>Tareas prácticas:</strong></p>
+    <ul>
+      <li>Mostrar alertas, manipular textos dinámicamente.</li>
+      <li>Agregar interactividad (botones que cambian texto, ocultan elementos, etc.).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Etapa 5: Responsive Design</h2>
+    <p><strong>Objetivo:</strong> Que tus páginas se vean bien en dispositivos móviles.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Responsive Design Basics</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">Media Queries</a></li>
+    </ul>
+    <p><strong>Tareas prácticas:</strong></p>
+    <ul>
+      <li>Adaptar una página para que se vea bien en móvil y escritorio.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Etapa 6: Accesibilidad Web (A11y)</h2>
+    <p><strong>Objetivo:</strong> Hacer sitios inclusivos para personas con discapacidades.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility/What_is_accessibility" target="_blank">Accesibilidad web</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility/HTML" target="_blank">Accesibilidad en HTML</a></li>
+    </ul>
+    <p><strong>Tareas prácticas:</strong></p>
+    <ul>
+      <li>Usar etiquetas correctas (<code>alt</code> en imágenes, roles, navegación por teclado).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Etapa 7: Git y GitHub</h2>
+    <p><strong>Objetivo:</strong> Controlar versiones de tus proyectos.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/GitHub" target="_blank">Git básico en MDN</a></li>
+    </ul>
+    <p><strong>Tareas prácticas:</strong></p>
+    <ul>
+      <li>Crear un repositorio Git.</li>
+      <li>Subir tus proyectos a GitHub.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Etapa 8: Construcción de Portafolio</h2>
+    <p><strong>Objetivo:</strong> Mostrar tus habilidades al mundo.</p>
+    <ul>
+      <li>Una landing page de producto.</li>
+      <li>Un pequeño blog personal.</li>
+      <li>Una galería interactiva de imágenes.</li>
+      <li>Un formulario funcional con validación básica en JS.</li>
+    </ul>
+  </section>
+  
+  <script>
+    const cells = document.querySelectorAll('.checkbox-cell');
+
+    // Cargar progreso guardado
+    cells.forEach((cell, index) => {
+      const saved = localStorage.getItem('progress-' + index);
+      if (saved === '✅') {
+        cell.textContent = '✅';
+      }
+    });
+
+    // Guardar al hacer clic
+    cells.forEach((cell, index) => {
+      cell.addEventListener('click', () => {
+        cell.textContent = cell.textContent === '✅' ? '⬜' : '✅';
+        localStorage.setItem('progress-' + index, cell.textContent);
+      });
+    });
+  </script>
+</body>
+</html>
