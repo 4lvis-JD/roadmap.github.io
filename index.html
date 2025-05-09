@@ -16,92 +16,101 @@
   </head>
   
   <style>
-  :root {
-    /* Modo claro (por defecto) */
-    --bg: #f9f9f9;
-    --card-bg: #ffffff;
-    --text: #222222;
-    --button-bg: #e0e0e0;
-    --button-check: #0f0;
-    --add-inf: #66ff00be;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
+    body.modo-claro {
+      --bg: #e7e7e7b9;
+      --card-bg: #ffffff;
+      --text: #1e1e1e;
+      --button-bg: #d0d7de;
+      --toggle-button-bg: #1e1e1e;
+      --toggle-button-text: #ffffff;
+      --button-bg-hover: #5a5a5a;
+      --button-check: #4caf50;
+      --add-inf: #3cb371;
+    }
+  
+    body.modo-oscuro {
       --bg: #121212;
       --card-bg: #1e1e1e;
-      --text: #f5f5f5;
-      --button-bg: #444;
-      --button-check: #0f0;
-      --add-inf: #e6e92e;
+      --text: #e0e0e0;
+      --button-bg: #464646;
+      --toggle-button-bg: #ffffff;
+      --toggle-button-text: #1e1e1e;
+      --button-bg-hover: #c0bebe;
+      --button-check: #66bb6a;
+      --add-inf: #98ee99;
     }
-  }
+  
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       padding: 1rem;
       margin: 0;
+      transition: background 0.3s ease, color 0.3s ease;
     }
-
+  
     h1 {
       text-align: center;
       margin-bottom: 2rem;
       font-size: 1.5rem;
     }
-
+  
     section {
       background-color: var(--card-bg);
       padding: 1.5rem;
       margin-bottom: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
     }
+  
     h2 {
-      color: #d63384;
+      color: #ff79c6;
     }
-    .fecha{
-      color: #526888;
+  
+    .fecha {
+      color: #5fa8d3;
     }
+  
     .add-inf {
-      color: #e6e92e;
       font-size: 0.8rem;
-      color-adjust: exact;
-    }
-    .add-inf {
+      color: var(--add-inf);
       background-color: var(--card-bg);
     }
+  
     ul {
       padding-left: 1.2rem;
     }
+  
     code {
-      background-color: #eee;
+      background-color: #e8e8e8;
       padding: 2px 4px;
       border-radius: 4px;
     }
+  
     .video-links {
       margin-top: 1rem;
       padding-left: 1rem;
     }
+  
     .video-links a {
-      display: inline;
-      width: auto;
-      margin-bottom: 0.5rem;
-      color: #0d6efd;
+      color: #42a5f5;
       text-decoration: none;
     }
+  
     .video-links a:hover {
       text-decoration: underline;
     }
+  
     .roadmap-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1rem;
       margin-bottom: 2rem;
     }
-
+  
     .stage-card {
-      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      border: 1px solid #e0e0e0;
       border-radius: 12px;
       padding: 1.2rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -112,16 +121,26 @@
       transition: transform 0.2s ease, background-color 0.3s ease;
     }
 
+    body.modo-oscuro .stage-card {
+      background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+      border: 1px solid rgba(255, 255, 255, 0.2); /* borde apenas visible */
+    }
+
+    body.modo-claro .stage-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(0, 0, 0, 0.2); /* borde negro tenue */
+    }
+  
     .stage-card:hover {
       transform: scale(1.02);
     }
-
+  
     .stage-card h3 {
       margin: 0;
       font-size: 1rem;
       flex: 1;
     }
-
+  
     .complete-btn {
       font-size: 1.3rem;
       background-color: var(--button-bg);
@@ -131,48 +150,68 @@
       padding: 0.4rem 0.6rem;
       transition: all 0.2s ease;
     }
-
+  
     .complete-btn:hover {
       transform: scale(1.1);
     }
-
+  
     .complete-btn.completed {
       background-color: var(--button-check);
-      color: #000;
+      color: #fff;
       font-weight: bold;
     }
-
-  @media (max-width: 480px) {
-    .stage-card {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+  
+    @media (max-width: 480px) {
+      .stage-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .stage-card h3 {
+        font-size: 1rem;
+        text-align: left;
+      }
+  
+      .complete-btn {
+        align-self: center;
+        margin-left: auto;
+      }
+    }
+  
+    .stage-card.completed {
+      background: linear-gradient(135deg, #d4edda, #c3e6cb);
+      box-shadow: 0 0 12px rgba(40, 167, 69, 0.3);
+      transform: scale(1.02);
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
-    .stage-card h3 {
-      font-size: 1rem;
-      text-align: left;
+    /* Estilo general del botón */
+    .toggle-mode-btn {
+      position: fixed;
+      bottom: 1.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--toggle-button-bg);
+      color: var(--toggle-button-text);
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      font-size: 0.95rem;
+      cursor: pointer;
+      /* transition: background 0.3s ease; */
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    .complete-btn {
-      align-self: center;
-      margin-left: auto;
+    .toggle-mode-btn:hover {
+      background-color: var(--button-bg-hover);
     }
-  @media (prefers-color-scheme: dark) {
-  .stage-card {
-    background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
-  }
-}
-}
-.stage-card.completed {
-  background: linear-gradient(135deg, #d4edda, #c3e6cb);
-  box-shadow: 0 0 12px rgba(40, 167, 69, 0.3);
-  transform: scale(1.02);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-  </style>
+  </style>      
 </head>
 <body>
+  <button id="toggle-mode-btn" class="toggle-mode-btn">🌙 Cambiar modo</button>
   <h1>Ruta de Estudio Front-End Junior (Basada en MDN)</h1>
   <div class="roadmap-grid">
     <div class="stage-card" data-index="0">
@@ -345,31 +384,70 @@
   
     buttons.forEach((btn, index) => {
       const icon = btn.querySelector('i');
+      const card = btn.parentElement;
       const saved = localStorage.getItem('progress-' + index);
   
+      // Al cargar la página
       if (saved === 'completed') {
         icon.classList.remove('fa-square');
         icon.classList.add('fa-square-check', 'fa-bounce');
         btn.classList.add('completed');
+        card.classList.add('completed'); // importante
       }
   
+      // Al hacer clic
       btn.addEventListener('click', () => {
-        const completed = icon.classList.contains('fa-square-check');
-        if (completed) {
+        const isCompleted = icon.classList.contains('fa-square-check');
+  
+        if (isCompleted) {
+          // Desmarcar
           icon.classList.remove('fa-square-check', 'fa-bounce');
           icon.classList.add('fa-square');
           btn.classList.remove('completed');
+          card.classList.remove('completed'); // importante
           localStorage.setItem('progress-' + index, 'incomplete');
         } else {
+          // Marcar como completado
           icon.classList.remove('fa-square');
           icon.classList.add('fa-square-check', 'fa-bounce');
           btn.classList.add('completed');
-          btn.classList.toggle('completed', !completed);
-          btn.parentElement.classList.toggle('completed', !completed);
+          card.classList.add('completed'); // importante
           localStorage.setItem('progress-' + index, 'completed');
         }
       });
     });
+  </script>  
+  <script>
+    const body = document.body;
+    const toggleBtn = document.getElementById('toggle-mode-btn');
+  
+    // Inicializar modo basado en localStorage o preferencia del sistema
+    const savedMode = localStorage.getItem('modo');
+    if (savedMode) {
+      body.classList.add(savedMode);
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      body.classList.add(prefersDark ? 'modo-oscuro' : 'modo-claro');
+    }
+  
+    toggleBtn.addEventListener('click', () => {
+      if (body.classList.contains('modo-oscuro')) {
+        body.classList.replace('modo-oscuro', 'modo-claro');
+        localStorage.setItem('modo', 'modo-claro');
+        toggleBtn.textContent = '🌙 Cambiar modo';
+      } else {
+        body.classList.replace('modo-claro', 'modo-oscuro');
+        localStorage.setItem('modo', 'modo-oscuro');
+        toggleBtn.textContent = '☀️ Cambiar modo';
+      }
+    });
+
+    // Inicializar el texto del botón al cargar
+    if (body.classList.contains('modo-oscuro')) {
+      toggleBtn.textContent = '☀️ Cambiar modo';
+    } else {
+      toggleBtn.textContent = '🌙 Cambiar modo';
+    }
   </script>  
 </body>
 </html>
