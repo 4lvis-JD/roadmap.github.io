@@ -5,385 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ruta de Estudio Front-End Junior</title>
   <link rel="icon" href="img/r.png" type="image/x-icon"/>
-  <head>
-    <meta property="og:title" content="Ruta de Estudio Front-End Junior">
-    <meta property="og:description" content="Esta hoja de ruta te guiará en tu camino para convertirte en un desarrollador Front-End Junior.">
-    <meta property="og:image" content="https://transcendent-pony-5188d2.netlify.app/img/preview-card.png">
-    <meta property="og:url" content="https://transcendent-pony-5188d2.netlify.app/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <script src="https://kit.fontawesome.com/a2e8d1db65.js" crossorigin="anonymous"></script>
-  </head>
-  
-  <style>
-    body.modo-claro {
-      --bg: rgba(231, 231, 231, 0.507);
-      --card-bg: #ffffff;
-      --text: #1e1e1e;
-      --button-bg: #ffffff;
-      --toggle-button-bg: #472a42;
-      --toggle-button-text: #ffffff;
-      --button-bg-hover: #353535;
-      --button-check: #c938a4;
-      --add-inf: #8f6415;
-      --link-color: #001dc4;
-      --link-hover-color: #1e88e5;
-      --fecha-color: #4b65fa;
-    }
-  
-    body.modo-oscuro {
-      --bg: #121212;
-      --card-bg: #1e1e1e;
-      --text: #e0e0e0;
-      --button-bg: #1a1a1a;
-      --toggle-button-bg: #ffd3ff;
-      --toggle-button-text: #1e1e1e;
-      --button-bg-hover: #fef4ff;
-      --button-check: #c938a4;
-      --add-inf: #eee598;
-      --link-color: #90caf9;
-      --link-hover-color: #64b5f6;
-      --fecha-color: #5fa8d3;
-    }
-  
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      padding: 1rem;
-      margin: 0;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-  
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.5rem;
-    }
-  
-    section {
-      background-color: var(--card-bg);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
-    }
-  
-    h2 {
-      color: #ff79c6;
-    }
-  
-    .fecha {
-      color: var(--fecha-color);
-    }
-  
-    .add-inf {
-      font-size: 0.8rem;
-      color: var(--add-inf);
-      background-color: var(--card-bg);
-    }
-
-    a {
-      color: var(--link-color);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: var(--link-hover-color);
-      text-decoration: underline;
-    }
-  
-    ul {
-      padding-left: 1.2rem;
-    }
-  
-    code {
-      background-color: #e8e8e8;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-
-    p {
-      margin-bottom: 0;
-    }
-
-    .video-links {
-      padding-left: 2rem;
-    }
-  
-    .video-links a {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-  
-    .video-links a:hover {
-      color: var(--link-hover-color);
-      text-decoration: underline;
-    }
-  
-    .roadmap-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-  
-    .stage-card {
-      background: linear-gradient(135deg, #ffffff, #f1f5f9);
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 1.2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1rem;
-      align-items: center;
-      transition: transform 0.2s ease, background-color 0.3s ease;
-    }
-
-    body.modo-oscuro .stage-card {
-      background: linear-gradient(135deg, #141414, #6343648a);
-      border: 1px solid rgba(255, 255, 255, 0.2); /* borde apenas visible */
-    }
-
-    body.modo-claro .stage-card {
-      background: linear-gradient(135deg, #ffffff, #f5c5f1);
-      border: 1px solid rgba(0, 0, 0, 0.3); /* borde negro tenue */
-    }
-  
-    .stage-card:hover {
-      transform: scale(1.02);
-    }
-  
-    .stage-card h3 {
-      margin: 0;
-      font-size: 1rem;
-      flex: 1;
-    }
-  
-    .complete-btn {
-      font-size: 1.3rem;
-      background-color: var(--button-bg);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      padding: 0.4rem 0.6rem;
-      transition: all 0.2s ease;
-    }
-  
-    .complete-btn:hover {
-      transform: scale(1.1);
-    }
-  
-    .complete-btn.completed {
-      background-color: var(--button-check);
-      color: #fff;
-      font-weight: bold;
-    }
-  
-    @media (max-width: 480px) {
-      .stage-card {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-  
-      .stage-card h3 {
-        font-size: 1rem;
-        text-align: left;
-      }
-  
-      .complete-btn {
-        align-self: center;
-        margin-left: auto;
-      }
-    }
-  
-    .stage-card.completed {
-      background: linear-gradient(230deg, #edd4ea, #e3c3e6);
-      box-shadow: 0 0 12px rgba(152, 40, 167, 0.3);
-      transform: scale(1.02);
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    /* Estilo general del botón */
-    .toggle-mode-btn {
-      position: fixed;
-      bottom: 1.2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--toggle-button-bg);
-      color: var(--toggle-button-text);
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 999px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-      font-size: 0.95rem;
-      cursor: pointer;
-      /* transition: background 0.3s ease; */
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .toggle-mode-btn:hover {
-      background-color: var(--button-bg-hover);
-    }
-  </style>      
+  <link rel="stylesheet" href="styles/styles.css" type="text/css">
+  <meta property="og:title" content="Ruta de Estudio Front-End Junior">
+  <meta property="og:description" content="Esta hoja de ruta te guiará en tu camino para convertirte en un desarrollador Front-End Junior.">
+  <meta property="og:image" content="https://transcendent-pony-5188d2.netlify.app/img/preview-card.png">
+  <meta property="og:url" content="https://transcendent-pony-5188d2.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://kit.fontawesome.com/a2e8d1db65.js" crossorigin="anonymous"></script> 
 </head>
 <body>
   <button id="toggle-mode-btn" class="toggle-mode-btn">🌙 Cambiar modo</button>
   <h1>Ruta de Estudio Front-End Junior (Basada en MDN)</h1>
   <div class="roadmap-grid">
     <div class="stage-card" data-index="0">
-      <h3>Fundamentos de la Web</h3>
+      <a href="#etapa-1" class="card-content-link">
+        <h3 class="no-decor">Fundamentos de la Web</h3>
+      </a>
       <button class="complete-btn"><i class="fa-regular fa-square"></i></button>
     </div>
     <div class="stage-card" data-index="1">
-      <h3>HTML Básico y Semántico</h3>
+      <a href="#etapa-2" class="card-content-link">
+        <h3 class="no-decor">HTML Básico y Semántico</h3>
+      </a>
       <button class="complete-btn"><i class="fa-regular fa-square"></i></button>
     </div>
     <div class="stage-card" data-index="2">
-      <h3>CSS Básico</h3>
+      <a href="#etapa-3" class="card-content-link">
+        <h3 class="no-decor">CSS Básico</h3>
+      </a>
       <button class="complete-btn"><i class="fa-regular fa-square"></i></button>
     </div>
     <div class="stage-card" data-index="3">
-      <h3>JavaScript Fundamental</h3>
+      <a href="#etapa-4" class="card-content-link">
+        <h3 class="no-decor">JavaScript Fundamental</h3>
+      </a>
       <button class="complete-btn"><i class="fa-regular fa-square"></i></button>
     </div>
     <div class="stage-card" data-index="4">
-      <h3>Responsive Design</h3>
+      <a href="#etapa-5" class="card-content-link">
+        <h3 class="no-decor">Responsive Design</h3>
+      </a>
       <button class="complete-btn"><i class="fa-regular fa-square"></i></button>
     </div>
     <div class="stage-card" data-index="5">
-      <h3>Accesibilidad Web</h3>
+      <a href="#etapa-6" class="card-content-link">
+        <h3 class="no-decor">Accesibilidad Web</h3>
+      </a>
       <button class="complete-btn"><i class="fa-regular fa-square"></i></button>
     </div>
     <div class="stage-card" data-index="6">
-      <h3>Git y GitHub</h3>
+      <a href="#etapa-7" class="card-content-link">
+        <h3 class="no-decor">Git y GitHub</h3>
+      </a>
       <button class="complete-btn"><i class="fa-regular fa-square"></i></button>
     </div>
     <div class="stage-card" data-index="7">
-      <h3>Construcción de Portafolio</h3>
+      <a href="#etapa-8" class="card-content-link">
+        <h3 class="no-decor">Construcción de portafolio</h3>
+      </a>
       <button class="complete-btn"><i class="fa-regular fa-square"></i></button>
     </div>
   </div>
-  <section>
-    <h2>Etapa 1: Fundamentos de la Web <span class="fecha">(30/04/2025 - 01/05/2025)</span></h2>
+  <section id="etapa-1">
+    <h2 id="">Etapa 1: Fundamentos de la Web <span class="fecha">(30/04/2025 - 01/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
       <dd>Qué es la web, cómo funciona un navegador, y los pilares de una página: HTML, CSS y JavaScript.</dd><br>
       <dt>Recurso principal:</dt>
-      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web" target="_blank">Comenzando con la Web - MDN</a></dd>
-      <p>Recursos adicionales:</p>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web" target="_blank">Comenzando con la Web - MDN</a></dd><br>
+      <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://www.youtube.com/watch?v=uunnO9yZCYk" target="_blank">¿Cómo funciona Internet?</a><br>
+        <a href="https://www.youtube.com/watch?v=uunnO9yZCYk" target="_blank">¿Cómo funciona Internet?</a>
         <a href="https://www.youtube.com/watch?v=H2Pnadj2wvU" target="_blank">Cómo funciona un navegador web</a>
       </div>
     </dl>
   </section>
 
-  <section>
+  <section id="etapa-2">
     <h2>Etapa 2: HTML Básico y Semántico <span class="fecha">(02/05/2025 - 05/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
       <dd>Estructura básica HTML, etiquetas semánticas, listas, enlaces, imágenes, tablas, formularios.</dd><br>
       <dt>Recurso principal:</dt>
-      <dd><a href="https://developer.mozilla.org/es/docs/Learn/HTML" target="_blank">Aprende HTML - MDN</a></dd>
-      <p>Recursos adicionales:</p>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/HTML" target="_blank">Aprende HTML - MDN</a></dd><br>
+      <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://www.youtube.com/watch?v=MJkdaVFHrto" target="_blank">HTML desde cero</a><br>
+        <span class="add-inf"> | HolaMundo - 3:30Hrs</span>
+        <a href="https://www.youtube.com/watch?v=MJkdaVFHrto" target="_blank">HTML desde cero</a>
         <a href="https://www.youtube.com/watch?v=FeXpLU515AI" target="_blank">Etiquetas semánticas</a>
       </div>
     </dl>
   </section>
 
-  <section>
+  <section id="etapa-3">
     <h2>Etapa 3: CSS Básico <span class="fecha">(06/05/2025 - 09/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
       <dd>Estilos, selectores, propiedades básicas, colores, fuentes, modelo de caja.</dd><br>
       <dt>Recurso principal:</dt>
-      <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS" target="_blank">Aprende CSS - MDN</a></dd>
-      <p>Recursos adicionales:</p>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS" target="_blank">Aprende CSS - MDN</a></dd><br>
+      <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://www.youtube.com/watch?v=wZniZEbPAzk" target="_blank">Curso básico de CSS</a><br>
-        <a href="https://www.youtube.com/watch?v=c3Ok7uIKwU8" target="_blank">Modelo de caja explicado</a><br>
-        <a href="https://www.youtube.com/watch?v=TlJbu0BMLaY" target="_blank">Curso de CSS completo</a><span class="add-inf"> | Midudev - 7Hrs</span>
+        <a href="https://www.youtube.com/watch?v=wZniZEbPAzk" target="_blank">Curso básico de CSS</a>
+        <a href="https://www.youtube.com/watch?v=c3Ok7uIKwU8" target="_blank">Modelo de caja explicado</a>
+        <span class="add-inf"> | Midudev - 7Hrs</span>
+        <a href="https://www.youtube.com/watch?v=TlJbu0BMLaY" target="_blank">Curso de CSS completo</a>
       </div>
     </dl>
   </section>
 
-  <section>
+  <section id="etapa-4">
     <h2>Etapa 4: JavaScript Fundamental <span class="fecha">(10/05/2025 - 14/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
       <dd>Variables, operadores, estructuras de control, funciones, eventos, DOM.</dd><br>
       <dt>Recurso principal:</dt>
-      <dd><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript" target="_blank">Aprende JavaScript - MDN</a></dd>
-      <p>Recursos adicionales:</p>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript" target="_blank">Aprende JavaScript - MDN</a></dd><br>
+      <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://www.youtube.com/watch?v=z95mZVUcJ-E" target="_blank">Curso JavaScript desde cero</a><span class="add-inf"> | SoyDalto - 10Hrs</span><br>
-        <a href="https://www.youtube.com/watch?v=QoC4RxNIs5M">Curso Javascript para principiantes</a><span class="add-inf"> | HolaMundo - 3:30Hrs</span><br>
+        <span class="add-inf"> | SoyDalto - 10Hrs</span>
+        <a href="https://www.youtube.com/watch?v=z95mZVUcJ-E" target="_blank">Curso JavaScript desde cero</a>
+        <span class="add-inf"> | HolaMundo - 3:30Hrs</span>
+        <a href="https://www.youtube.com/watch?v=QoC4RxNIs5M">Curso Javascript para principiantes</a>
         <a href="https://www.youtube.com/watch?v=GJXXZpZxP2I" target="_blank">Manipular el DOM con JS</a>
       </div>
     </dl>
   </section>
 
-  <section>
+  <section id="etapa-5">
     <h2>Etapa 5: Responsive Design <span class="fecha">(15/05/2025 - 16/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
       <dd>Diseño adaptativo, media queries, diseño fluido, viewport, Flexbox.</dd><br>
       <dt>Recurso principal:</dt>
-      <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Responsive Design - MDN</a></dd>
-      <p>Recursos adicionales:</p>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Responsive Design - MDN</a></dd><br>
+      <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://youtu.be/O9cEjVaUGY8?si=u2_tXYnLN7_7VjuQ" target="_blank">Diseño responsive con CSS</a><span class="add-inf"> | En 2025</span><br>
+        <span class="add-inf"> | En 2025</span>
+        <a href="https://youtu.be/O9cEjVaUGY8?si=u2_tXYnLN7_7VjuQ" target="_blank">Diseño responsive con CSS</a>
         <a href="https://www.youtube.com/watch?v=yneuaVjotO8&t" target="_blank">Responsive design básico</a>
       </div>
     </dl>
   </section>
 
-  <section>
+  <section id="etapa-6">
     <h2>Etapa 6: Accesibilidad Web <span class="fecha">(17/05/2025 - 18/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
       <dd>Buenas prácticas para personas con discapacidades, ARIA, contraste, navegación con teclado.</dd><br>
       <dt>Recurso principal:</dt>
-      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility" target="_blank">Accesibilidad Web - MDN</a></dd>
-      <p>Recursos adicionales:</p>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility" target="_blank">Accesibilidad Web - MDN</a></dd><br>
+      <dt>Recursos adicionales:</dt>
       <div class="video-links">
         <a href="https://www.youtube.com/watch?v=fcXL0tfcgqc" target="_blank">Accesibilidad web explicada</a>
       </div>
     </dl>
   </section>
 
-  <section>
+  <section id="etapa-7">
     <h2>Etapa 7: Git y GitHub <span class="fecha">(19/05/2025 - 20/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
       <dd>Control de versiones con Git, flujo básico, comandos esenciales, trabajo con repositorios remotos.</dd><br>
       <dt>Recurso principal:</dt>
-      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/GitHub" target="_blank">Git y GitHub - MDN</a></dd>
-      <p>Recursos adicionales:</p>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/GitHub" target="_blank">Git y GitHub - MDN</a></dd><br>
+      <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://www.youtube.com/watch?v=3GymExBkKjE" target="_blank">Git y GitHub desde cero</a><span class="add-inf"> | MoureDev - 5Hrs</span>
+        <span class="add-inf"> | MoureDev - 5Hrs</span>
+        <a href="https://www.youtube.com/watch?v=3GymExBkKjE" target="_blank">Git y GitHub desde cero</a>
       </div>
     </dl>
   </section>
 
-  <section>
+  <section id="etapa-8">
     <h2>Etapa 8: Construcción de Portafolio <span class="fecha">(21/05/2025 - 22/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
       <dd>Diseñar y construir un sitio personal que muestre tus habilidades y proyectos.</dd><br>
       <dt>Recurso principal:</dt>
-      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/Deployment" target="_blank">Publica tu sitio - MDN</a></dd>
-      <p>Recursos adicionales:</p>
+      <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/Deployment" target="_blank">Publica tu sitio - MDN</a></dd><br>
+      <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://www.youtube.com/watch?v=q55_DpQLGEU" target="_blank">Cómo crear tu portafolio web</a><span class="add-inf"> | Consejos de MoureDev</span><br>
-        <a href="https://www.youtube.com/watch?v=0uf0yBJ2ixk" target="_blank">¿Cómo construir tu portafolio como programador?</a><br>
+        <span class="add-inf"> | Consejos de MoureDev</span>
+        <a href="https://www.youtube.com/watch?v=q55_DpQLGEU" target="_blank">Cómo crear tu portafolio web</a>
+        <a href="https://www.youtube.com/watch?v=0uf0yBJ2ixk" target="_blank">¿Cómo construir tu portafolio como programador?</a>
         <a href="https://www.youtube.com/watch?v=7W6-jSOFMgM" target="_blank">Subir tu página a Netlify</a>
       </div>
     </dl>
@@ -408,75 +214,6 @@
     </ul>
     <p>🚀 ¡Sigue construyendo, equivocándote y aprendiendo! La práctica constante es tu mejor aliada.</p>
   </section>
-  <script>
-    const buttons = document.querySelectorAll('.complete-btn');
-  
-    buttons.forEach((btn, index) => {
-      const icon = btn.querySelector('i');
-      const card = btn.parentElement;
-      const saved = localStorage.getItem('progress-' + index);
-  
-      // Al cargar la página
-      if (saved === 'completed') {
-        icon.classList.remove('fa-square');
-        icon.classList.add('fa-square-check', 'fa-bounce');
-        btn.classList.add('completed');
-        card.classList.add('completed'); // importante
-      }
-  
-      // Al hacer clic
-      btn.addEventListener('click', () => {
-        const isCompleted = icon.classList.contains('fa-square-check');
-  
-        if (isCompleted) {
-          // Desmarcar
-          icon.classList.remove('fa-square-check', 'fa-bounce');
-          icon.classList.add('fa-square');
-          btn.classList.remove('completed');
-          card.classList.remove('completed'); // importante
-          localStorage.setItem('progress-' + index, 'incomplete');
-        } else {
-          // Marcar como completado
-          icon.classList.remove('fa-square');
-          icon.classList.add('fa-square-check', 'fa-bounce');
-          btn.classList.add('completed');
-          card.classList.add('completed'); // importante
-          localStorage.setItem('progress-' + index, 'completed');
-        }
-      });
-    });
-  </script>  
-  <script>
-    const body = document.body;
-    const toggleBtn = document.getElementById('toggle-mode-btn');
-  
-    // Inicializar modo basado en localStorage o preferencia del sistema
-    const savedMode = localStorage.getItem('modo');
-    if (savedMode) {
-      body.classList.add(savedMode);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      body.classList.add(prefersDark ? 'modo-oscuro' : 'modo-claro');
-    }
-  
-    toggleBtn.addEventListener('click', () => {
-      if (body.classList.contains('modo-oscuro')) {
-        body.classList.replace('modo-oscuro', 'modo-claro');
-        localStorage.setItem('modo', 'modo-claro');
-        toggleBtn.textContent = '🌙 Cambiar modo';
-      } else {
-        body.classList.replace('modo-claro', 'modo-oscuro');
-        localStorage.setItem('modo', 'modo-oscuro');
-        toggleBtn.textContent = '☀️ Cambiar modo';
-      }
-    });
-
-    // Inicializar el texto del botón al cargar
-    if (body.classList.contains('modo-oscuro')) {
-      toggleBtn.textContent = '☀️ Cambiar modo';
-    } else {
-      toggleBtn.textContent = '🌙 Cambiar modo';
-    }
-  </script>  
+  <script src="scripts/main.js"></script>
 </body>
 </html>
