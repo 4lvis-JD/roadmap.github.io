@@ -25,9 +25,10 @@
       --toggle-button-text: #ffffff;
       --button-bg-hover: #353535;
       --button-check: #c938a4;
-      --add-inf: #3cb371;
-      --link-color: #42a5f5;
+      --add-inf: #8f6415;
+      --link-color: #001dc4;
       --link-hover-color: #1e88e5;
+      --fecha-color: #4b65fa;
     }
   
     body.modo-oscuro {
@@ -39,9 +40,10 @@
       --toggle-button-text: #1e1e1e;
       --button-bg-hover: #fef4ff;
       --button-check: #c938a4;
-      --add-inf: #98ee99;
+      --add-inf: #eee598;
       --link-color: #90caf9;
       --link-hover-color: #64b5f6;
+      --fecha-color: #5fa8d3;
     }
   
     body {
@@ -72,7 +74,7 @@
     }
   
     .fecha {
-      color: #5fa8d3;
+      color: var(--fecha-color);
     }
   
     .add-inf {
@@ -111,11 +113,12 @@
     }
   
     .video-links a {
-      color: #42a5f5;
+      color: var(--link-color);
       text-decoration: none;
     }
   
     .video-links a:hover {
+      color: var(--link-hover-color);
       text-decoration: underline;
     }
   
