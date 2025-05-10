@@ -17,27 +17,31 @@
   
   <style>
     body.modo-claro {
-      --bg: #e7e7e7b9;
+      --bg: rgba(231, 231, 231, 0.507);
       --card-bg: #ffffff;
       --text: #1e1e1e;
-      --button-bg: #d0d7de;
+      --button-bg: #ffffff;
       --toggle-button-bg: #472a42;
       --toggle-button-text: #ffffff;
       --button-bg-hover: #353535;
       --button-check: #c938a4;
       --add-inf: #3cb371;
+      --link-color: #42a5f5;
+      --link-hover-color: #1e88e5;
     }
   
     body.modo-oscuro {
       --bg: #121212;
       --card-bg: #1e1e1e;
       --text: #e0e0e0;
-      --button-bg: #464646;
-      --toggle-button-bg: #ffffff;
+      --button-bg: #1a1a1a;
+      --toggle-button-bg: #ffd3ff;
       --toggle-button-text: #1e1e1e;
-      --button-bg-hover: #c0bebe;
-      --button-check: #66bb6a;
+      --button-bg-hover: #fef4ff;
+      --button-check: #c938a4;
       --add-inf: #98ee99;
+      --link-color: #90caf9;
+      --link-hover-color: #64b5f6;
     }
   
     body {
@@ -76,6 +80,17 @@
       color: var(--add-inf);
       background-color: var(--card-bg);
     }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--link-hover-color);
+      text-decoration: underline;
+    }
   
     ul {
       padding-left: 1.2rem;
@@ -86,10 +101,13 @@
       padding: 2px 4px;
       border-radius: 4px;
     }
-  
+
+    p {
+      margin-bottom: 0;
+    }
+
     .video-links {
-      margin-top: 1rem;
-      padding-left: 1rem;
+      padding-left: 2rem;
     }
   
     .video-links a {
@@ -122,13 +140,13 @@
     }
 
     body.modo-oscuro .stage-card {
-      background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+      background: linear-gradient(135deg, #141414, #6343648a);
       border: 1px solid rgba(255, 255, 255, 0.2); /* borde apenas visible */
     }
 
     body.modo-claro .stage-card {
-      background: linear-gradient(135deg, #ffffff, #ffc5fa);
-      border: 1px solid rgba(0, 0, 0, 0.2); /* borde negro tenue */
+      background: linear-gradient(135deg, #ffffff, #f5c5f1);
+      border: 1px solid rgba(0, 0, 0, 0.3); /* borde negro tenue */
     }
   
     .stage-card:hover {
@@ -180,8 +198,8 @@
     }
   
     .stage-card.completed {
-      background: linear-gradient(135deg, #d4edda, #c3e6cb);
-      box-shadow: 0 0 12px rgba(40, 167, 69, 0.3);
+      background: linear-gradient(230deg, #edd4ea, #e3c3e6);
+      box-shadow: 0 0 12px rgba(152, 40, 167, 0.3);
       transform: scale(1.02);
       transition: background 0.3s ease, transform 0.2s ease;
     }
@@ -251,9 +269,10 @@
     <h2>Etapa 1: Fundamentos de la Web <span class="fecha">(30/04/2025 - 01/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
-      <dd>Qué es la web, cómo funciona un navegador, y los pilares de una página: HTML, CSS y JavaScript.</dd>
+      <dd>Qué es la web, cómo funciona un navegador, y los pilares de una página: HTML, CSS y JavaScript.</dd><br>
       <dt>Recurso principal:</dt>
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web" target="_blank">Comenzando con la Web - MDN</a></dd>
+      <p>Recursos adicionales:</p>
       <div class="video-links">
         <a href="https://www.youtube.com/watch?v=uunnO9yZCYk" target="_blank">¿Cómo funciona Internet?</a><br>
         <a href="https://www.youtube.com/watch?v=H2Pnadj2wvU" target="_blank">Cómo funciona un navegador web</a>
@@ -265,9 +284,10 @@
     <h2>Etapa 2: HTML Básico y Semántico <span class="fecha">(02/05/2025 - 05/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
-      <dd>Estructura básica HTML, etiquetas semánticas, listas, enlaces, imágenes, tablas, formularios.</dd>
+      <dd>Estructura básica HTML, etiquetas semánticas, listas, enlaces, imágenes, tablas, formularios.</dd><br>
       <dt>Recurso principal:</dt>
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/HTML" target="_blank">Aprende HTML - MDN</a></dd>
+      <p>Recursos adicionales:</p>
       <div class="video-links">
         <a href="https://www.youtube.com/watch?v=MJkdaVFHrto" target="_blank">HTML desde cero</a><br>
         <a href="https://www.youtube.com/watch?v=FeXpLU515AI" target="_blank">Etiquetas semánticas</a>
@@ -279,9 +299,10 @@
     <h2>Etapa 3: CSS Básico <span class="fecha">(06/05/2025 - 09/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
-      <dd>Estilos, selectores, propiedades básicas, colores, fuentes, modelo de caja.</dd>
+      <dd>Estilos, selectores, propiedades básicas, colores, fuentes, modelo de caja.</dd><br>
       <dt>Recurso principal:</dt>
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS" target="_blank">Aprende CSS - MDN</a></dd>
+      <p>Recursos adicionales:</p>
       <div class="video-links">
         <a href="https://www.youtube.com/watch?v=wZniZEbPAzk" target="_blank">Curso básico de CSS</a><br>
         <a href="https://www.youtube.com/watch?v=c3Ok7uIKwU8" target="_blank">Modelo de caja explicado</a><br>
@@ -294,9 +315,10 @@
     <h2>Etapa 4: JavaScript Fundamental <span class="fecha">(10/05/2025 - 14/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
-      <dd>Variables, operadores, estructuras de control, funciones, eventos, DOM.</dd>
+      <dd>Variables, operadores, estructuras de control, funciones, eventos, DOM.</dd><br>
       <dt>Recurso principal:</dt>
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript" target="_blank">Aprende JavaScript - MDN</a></dd>
+      <p>Recursos adicionales:</p>
       <div class="video-links">
         <a href="https://www.youtube.com/watch?v=z95mZVUcJ-E" target="_blank">Curso JavaScript desde cero</a><span class="add-inf"> | SoyDalto - 10Hrs</span><br>
         <a href="https://www.youtube.com/watch?v=QoC4RxNIs5M">Curso Javascript para principiantes</a><span class="add-inf"> | HolaMundo - 3:30Hrs</span><br>
@@ -309,9 +331,10 @@
     <h2>Etapa 5: Responsive Design <span class="fecha">(15/05/2025 - 16/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
-      <dd>Diseño adaptativo, media queries, diseño fluido, viewport, Flexbox.</dd>
+      <dd>Diseño adaptativo, media queries, diseño fluido, viewport, Flexbox.</dd><br>
       <dt>Recurso principal:</dt>
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Responsive Design - MDN</a></dd>
+      <p>Recursos adicionales:</p>
       <div class="video-links">
         <a href="https://youtu.be/O9cEjVaUGY8?si=u2_tXYnLN7_7VjuQ" target="_blank">Diseño responsive con CSS</a><span class="add-inf"> | En 2025</span><br>
         <a href="https://www.youtube.com/watch?v=yneuaVjotO8&t" target="_blank">Responsive design básico</a>
@@ -323,9 +346,10 @@
     <h2>Etapa 6: Accesibilidad Web <span class="fecha">(17/05/2025 - 18/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
-      <dd>Buenas prácticas para personas con discapacidades, ARIA, contraste, navegación con teclado.</dd>
+      <dd>Buenas prácticas para personas con discapacidades, ARIA, contraste, navegación con teclado.</dd><br>
       <dt>Recurso principal:</dt>
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility" target="_blank">Accesibilidad Web - MDN</a></dd>
+      <p>Recursos adicionales:</p>
       <div class="video-links">
         <a href="https://www.youtube.com/watch?v=fcXL0tfcgqc" target="_blank">Accesibilidad web explicada</a>
       </div>
@@ -336,9 +360,10 @@
     <h2>Etapa 7: Git y GitHub <span class="fecha">(19/05/2025 - 20/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
-      <dd>Control de versiones con Git, flujo básico, comandos esenciales, trabajo con repositorios remotos.</dd>
+      <dd>Control de versiones con Git, flujo básico, comandos esenciales, trabajo con repositorios remotos.</dd><br>
       <dt>Recurso principal:</dt>
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/GitHub" target="_blank">Git y GitHub - MDN</a></dd>
+      <p>Recursos adicionales:</p>
       <div class="video-links">
         <a href="https://www.youtube.com/watch?v=3GymExBkKjE" target="_blank">Git y GitHub desde cero</a><span class="add-inf"> | MoureDev - 5Hrs</span>
       </div>
@@ -349,9 +374,10 @@
     <h2>Etapa 8: Construcción de Portafolio <span class="fecha">(21/05/2025 - 22/05/2025)</span></h2>
     <dl>
       <dt>¿Qué verás aquí?</dt>
-      <dd>Diseñar y construir un sitio personal que muestre tus habilidades y proyectos.</dd>
+      <dd>Diseñar y construir un sitio personal que muestre tus habilidades y proyectos.</dd><br>
       <dt>Recurso principal:</dt>
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/Deployment" target="_blank">Publica tu sitio - MDN</a></dd>
+      <p>Recursos adicionales:</p>
       <div class="video-links">
         <a href="https://www.youtube.com/watch?v=q55_DpQLGEU" target="_blank">Cómo crear tu portafolio web</a><span class="add-inf"> | Consejos de MoureDev</span><br>
         <a href="https://www.youtube.com/watch?v=0uf0yBJ2ixk" target="_blank">¿Cómo construir tu portafolio como programador?</a><br>
