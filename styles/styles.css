@@ -134,7 +134,9 @@ a:hover {
 
 /* Links sin decoración */
 .no-decor,
-.no-decor:hover {
+.no-decor:hover
+.no-decor:visited 
+.no-decor::after{
   color: var(--text);
   text-decoration: none;
 }
