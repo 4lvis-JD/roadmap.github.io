@@ -265,6 +265,7 @@ a:hover {
   border: none;
   border-radius: 1rem;
   background: linear-gradient(145deg, #d86ebf, #8d5ce7); /* Igual que el botón de "Volver arriba" */
+  transition: background 0.3s ease, transform 0.2s ease;
   color: white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -281,6 +282,25 @@ a:hover {
 
 .toggle-mode-btn:active {
   transform: scale(0.95) rotate(-8deg);
+}
+
+/* Hover en modo claro (fondo oscuro) */
+body:not(.modo-oscuro) .toggle-mode-btn:hover {
+  background: #472a42; /* Color oscuro para hover en modo claro */
+}
+
+/* Hover en modo oscuro (fondo blanco) */
+body.modo-oscuro .toggle-mode-btn:hover {
+  background: #ffffff; /* Color blanco para hover en modo oscuro */
+}
+
+/* Ajusta el color de los iconos en hover */
+body:not(.modo-oscuro) .toggle-mode-btn:hover svg {
+  stroke: #ffffff; /* Icono blanco en hover (modo claro) */
+}
+
+body.modo-oscuro .toggle-mode-btn:hover svg {
+  stroke: #1e1e1e; /* Icono oscuro en hover (modo oscuro) */
 }
 
 /* ========== */
