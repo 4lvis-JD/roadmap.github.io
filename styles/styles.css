@@ -20,6 +20,8 @@
   --card-gradient-end: #f5c5f1;
   --completed-card-gradient-start: #edd4ea;
   --completed-card-gradient-end: #e3c3e6;
+  --toggle-btn-bg: #472a42;
+  --toggle-btn-hover-icon: #ffffff;
 }
 
 /* Modo Oscuro */
@@ -40,6 +42,8 @@ body.modo-oscuro {
   --card-gradient-end: #6343648a;
   --completed-card-gradient-start: #2a1428;
   --completed-card-gradient-end: #4a2a4a;
+  --toggle-btn-bg: #ffffff;
+  --toggle-btn-hover-icon: #1e1e1e;
 }
 
 /* ================= */
@@ -284,25 +288,6 @@ a:hover {
   transform: scale(0.95) rotate(-8deg);
 }
 
-/* Hover en modo claro (fondo oscuro) */
-body:not(.modo-oscuro) .toggle-mode-btn:hover {
-  background: #472a42; /* Color oscuro para hover en modo claro */
-}
-
-/* Hover en modo oscuro (fondo blanco) */
-body.modo-oscuro .toggle-mode-btn:hover {
-  background: #ffffff; /* Color blanco para hover en modo oscuro */
-}
-
-/* Ajusta el color de los iconos en hover */
-body:not(.modo-oscuro) .toggle-mode-btn:hover svg {
-  stroke: #ffffff; /* Icono blanco en hover (modo claro) */
-}
-
-body.modo-oscuro .toggle-mode-btn:hover svg {
-  stroke: #1e1e1e; /* Icono oscuro en hover (modo oscuro) */
-}
-
 /* ========== */
 /* ÍCONOS SVG */
 /* ========== */
@@ -348,6 +333,15 @@ body.modo-oscuro .icon-sun {
 body.modo-oscuro .icon-moon {
   opacity: 0;
   transform: rotate(-90deg) scale(0.8);
+}
+
+.toggle-mode-btn:hover {
+  background: var(--toggle-button-bg);
+}
+
+.toggle-mode-btn:hover svg {
+  stroke: var(--toggle-btn-hover-icon);
+  fill: var(--toggle-btn-hover-icon);
 }
 
 /* ===================== */
@@ -402,6 +396,42 @@ body.modo-oscuro .icon-moon {
 .back-to-top-btn.visible {
   opacity: 1;
   visibility: visible;
+}
+
+/* BOTONES - HOVER AJUSTADO POR MODO DE TEMA */
+
+/* Modo claro: hover -> fondo oscuro, svg claro */
+body:not(.modo-oscuro) .floating-btn:hover,
+body:not(.modo-oscuro) .toggle-mode-btn:hover {
+  background: #1e1e1e; /* fondo oscuro */
+  color: #ffffff; /* ícono claro */
+}
+
+body:not(.modo-oscuro) .floating-btn:hover svg,
+body:not(.modo-oscuro) .toggle-mode-btn:hover svg {
+  stroke: #ffffff;
+  fill: #ffffff;
+}
+
+/* Modo oscuro: hover -> fondo claro, svg oscuro */
+body.modo-oscuro .floating-btn:hover,
+body.modo-oscuro .toggle-mode-btn:hover {
+  background: #ffffff; /* fondo claro */
+  color: #1e1e1e; /* ícono oscuro */
+}
+
+body.modo-oscuro .floating-btn:hover svg,
+body.modo-oscuro .toggle-mode-btn:hover svg {
+  stroke: #1e1e1e;
+  fill: #1e1e1e;
+}
+
+/* Desactiva el hover si tiene la clase no-hover */
+.floating-btn.no-hover:hover,
+.toggle-mode-btn.no-hover:hover {
+  background: inherit !important;
+  color: inherit !important;
+  transform: none !important;
 }
 
 /* Ajustes para móviles */

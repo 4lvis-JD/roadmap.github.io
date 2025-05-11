@@ -53,6 +53,18 @@ window.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add(modoGuardado);
 });
 
+// Elimina el estado :hover después del toque en móviles
+document.querySelectorAll('.floating-btn').forEach(btn => {
+  btn.addEventListener('touchstart', () => {
+    btn.classList.add('no-hover');
+  });
+  btn.addEventListener('touchend', () => {
+    setTimeout(() => {
+      btn.classList.remove('no-hover');
+    }, 150); // Le da tiempo al toque, luego elimina el efecto
+  });
+});
+
 
 // Función para manejar el scroll suave con polyfill para Safari
 function smoothScrollTo(target) {
