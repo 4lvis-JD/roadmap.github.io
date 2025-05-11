@@ -68,26 +68,58 @@ h1 {
 section {
   background-color: var(--card-bg);
   padding: 1.5rem;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0; /* Solo margen inferior */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
-  transition: background-color 0.3s ease;
   transition: all 0.4s ease-out;
+  scroll-margin-top: 70px;
+  padding-top: 80px;
 }
 
 section[id]{
   scroll-margin-top:70px;
 }
 
-section.active-section {
-  animation: highlight 2s ease;
-  box-shadow: 0 0 0 2px var(--button-check);
+/* Animación mejorada para la sección activa */
+@keyframes highlight {
+  0% {
+    outline: 2px solid transparent;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  20% {
+    outline: 2px solid rgba(201, 56, 164, 0.5);
+    outline-offset: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  60% {
+    outline: 2px solid rgba(201, 56, 164, 0.3);
+    outline-offset: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  100% {
+    outline: 2px solid transparent;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
-@keyframes highlight {
-  0% { box-shadow: 0 0 0 0 rgba(201, 56, 164, 0.7); }
-  50% { box-shadow: 0 0 0 10px rgba(201, 56, 164, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(201, 56, 164, 0); }
+section.active-section {
+  animation: highlight 2.5s ease-out;
+  /* Eliminar márgenes permanentes */
+}
+
+/* Asegurar que la sección mantenga el espacio durante la animación */
+section {
+  transition: margin 0.3s ease;
+}
+
+section.active-section {
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: margin 0.3s ease, box-shadow 3s ease-in-out;
 }
 
 /* Ajustar el padding para que el contenido no quede oculto */
@@ -128,15 +160,13 @@ a:hover {
 }
 
 .video-links a {
-  display: block;
+  display: inline;
   margin-bottom: 0.5rem;
 }
 
 /* Links sin decoración */
 .no-decor,
-.no-decor:hover
-.no-decor:visited 
-.no-decor::after{
+.no-decor:hover{
   color: var(--text);
   text-decoration: none;
 }
@@ -162,6 +192,15 @@ a:hover {
   align-items: center;
   transition: all 0.3s ease;
   overflow: hidden; /* Para contener el pseudo-elemento */
+}
+
+/* Deshabilita completamente el subrayado para elementos dentro de stage-card */
+.stage-card {
+  a, h3, .card-content-link, .no-decor {
+    &, &:hover, &:focus {
+      text-decoration: none !important;
+    }
+  }
 }
 
 /* Enlace que cubre el área clickeable */
@@ -214,26 +253,145 @@ a:hover {
   font-weight: bold;
 }
 
-/* Botón de cambio de tema */
+/* ===================== */
+/* BOTÓN CAMBIO DE TEMA */
+/* ===================== */
 .toggle-mode-btn {
   position: fixed;
-  bottom: 1.2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--toggle-button-bg);
-  color: var(--toggle-button-text);
-  padding: 0.6rem 1.2rem;
+  bottom: 2rem;
+  right: 1rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border: none;
-  border-radius: 999px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  font-size: 0.95rem;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #d86ebf, #8d5ce7); /* Igual que el botón de "Volver arriba" */
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease;
+  z-index: 1000;
 }
 
 .toggle-mode-btn:hover {
-  background-color: var(--button-bg-hover);
+  transform: scale(1.1);
+}
+
+.toggle-mode-btn:active {
+  transform: scale(0.95) rotate(-8deg);
+}
+
+/* ========== */
+/* ÍCONOS SVG */
+/* ========== */
+.toggle-icon {
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-icon svg {
+  position: absolute;
+  width: 70%; /* Reducimos un poco el tamaño para que no toque los bordes */
+  height: 70%;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform-origin: center;
+  margin: auto; /* Centrado adicional */
+}
+
+/* Mostrar el ícono del modo al que se va a cambiar */
+.icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
+.icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+body.modo-oscuro .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+body.modo-oscuro .icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.8);
+}
+
+/* ===================== */
+/* BOTÓN VOLVER ARRIBA */
+/* ===================== */
+.floating-btn {
+  position: fixed;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: none;
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(145deg, #d86ebf, #8d5ce7); /* MISMO que "volver arriba" */
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Redefinir "Volver arriba" */
+.back-to-top-btn {
+  bottom: 6.4rem;
+  right: 1rem;
+  background: linear-gradient(145deg, #d86ebf, #8d5ce7);
+}
+
+/* Ajuste para íconos internos */
+.back-to-top-btn svg,
+.toggle-mode-btn svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: currentColor;
+}
+
+/* Ajustes para que el botón aparezca después de 300px de desplazamiento | configuración en el script */
+.back-to-top-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .back-to-top-btn
+  .toggle-mode-btn {
+    bottom: 4.5rem;;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
 }
 
 /* ================== */

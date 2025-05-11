@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ruta de Estudio Front-End Junior</title>
-  <link rel="icon" href="img/r.png" type="image/x-icon"/>
+  <link rel="icon" href="imgs/r.png" type="image/x-icon"/>
   <link rel="stylesheet" href="styles/styles.css" type="text/css">
   <meta property="og:title" content="Ruta de Estudio Front-End Junior">
   <meta property="og:description" content="Esta hoja de ruta te guiará en tu camino para convertirte en un desarrollador Front-End Junior.">
@@ -12,10 +12,31 @@
   <meta property="og:url" content="https://transcendent-pony-5188d2.netlify.app/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="https://kit.fontawesome.com/a2e8d1db65.js" crossorigin="anonymous"></script> 
+  <script src="https://kit.fontawesome.com/a2e8d1db65.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <button id="toggle-mode-btn" class="toggle-mode-btn">🌙 Cambiar modo</button>
+<!-- En el archivo index.html, reemplaza el contenido dentro del botón toggle-mode-btn -->
+<button id="toggle-mode-btn" class="toggle-mode-btn floating-btn" aria-label="Cambiar tema">
+  <div class="toggle-icon">
+    <!-- Sol nuevo (icono de línea) -->
+    <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+      <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+      <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+      <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <!-- Luna nueva (icono de línea) -->
+    <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </div>
+</button>
+</button>
   <h1>Ruta de Estudio Front-End Junior (Basada en MDN)</h1>
   <div class="roadmap-grid">
     <div class="stage-card" data-index="0">
@@ -76,7 +97,7 @@
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web" target="_blank">Comenzando con la Web - MDN</a></dd><br>
       <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://www.youtube.com/watch?v=uunnO9yZCYk" target="_blank">¿Cómo funciona Internet?</a>
+        <a href="https://www.youtube.com/watch?v=uunnO9yZCYk" target="_blank">¿Cómo funciona Internet?</a><br>
         <a href="https://www.youtube.com/watch?v=H2Pnadj2wvU" target="_blank">Cómo funciona un navegador web</a>
       </div>
     </dl>
@@ -91,8 +112,8 @@
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/HTML" target="_blank">Aprende HTML - MDN</a></dd><br>
       <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <span class="add-inf"> | HolaMundo - 3:30Hrs</span>
         <a href="https://www.youtube.com/watch?v=MJkdaVFHrto" target="_blank">HTML desde cero</a>
+        <span class="add-inf"> | HolaMundo - 3:30Hrs</span><br>
         <a href="https://www.youtube.com/watch?v=FeXpLU515AI" target="_blank">Etiquetas semánticas</a>
       </div>
     </dl>
@@ -107,10 +128,10 @@
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS" target="_blank">Aprende CSS - MDN</a></dd><br>
       <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <a href="https://www.youtube.com/watch?v=wZniZEbPAzk" target="_blank">Curso básico de CSS</a>
-        <a href="https://www.youtube.com/watch?v=c3Ok7uIKwU8" target="_blank">Modelo de caja explicado</a>
-        <span class="add-inf"> | Midudev - 7Hrs</span>
+        <a href="https://www.youtube.com/watch?v=wZniZEbPAzk" target="_blank">Curso básico de CSS</a><br>
+        <a href="https://www.youtube.com/watch?v=c3Ok7uIKwU8" target="_blank">Modelo de caja explicado</a><br>
         <a href="https://www.youtube.com/watch?v=TlJbu0BMLaY" target="_blank">Curso de CSS completo</a>
+        <span class="add-inf"> | Midudev - 7Hrs</span>
       </div>
     </dl>
   </section>
@@ -124,10 +145,10 @@
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript" target="_blank">Aprende JavaScript - MDN</a></dd><br>
       <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <span class="add-inf"> | SoyDalto - 10Hrs</span>
         <a href="https://www.youtube.com/watch?v=z95mZVUcJ-E" target="_blank">Curso JavaScript desde cero</a>
-        <span class="add-inf"> | HolaMundo - 3:30Hrs</span>
+        <span class="add-inf"> | SoyDalto - 10Hrs</span><br>
         <a href="https://www.youtube.com/watch?v=QoC4RxNIs5M">Curso Javascript para principiantes</a>
+        <span class="add-inf"> | HolaMundo - 3:30Hrs</span><br>
         <a href="https://www.youtube.com/watch?v=GJXXZpZxP2I" target="_blank">Manipular el DOM con JS</a>
       </div>
     </dl>
@@ -142,8 +163,8 @@
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Responsive Design - MDN</a></dd><br>
       <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <span class="add-inf"> | En 2025</span>
         <a href="https://youtu.be/O9cEjVaUGY8?si=u2_tXYnLN7_7VjuQ" target="_blank">Diseño responsive con CSS</a>
+        <span class="add-inf"> | En 2025</span><br>
         <a href="https://www.youtube.com/watch?v=yneuaVjotO8&t" target="_blank">Responsive design básico</a>
       </div>
     </dl>
@@ -172,8 +193,8 @@
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/GitHub" target="_blank">Git y GitHub - MDN</a></dd><br>
       <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <span class="add-inf"> | MoureDev - 5Hrs</span>
         <a href="https://www.youtube.com/watch?v=3GymExBkKjE" target="_blank">Git y GitHub desde cero</a>
+        <span class="add-inf"> | MoureDev - 5Hrs</span>
       </div>
     </dl>
   </section>
@@ -187,9 +208,9 @@
       <dd><a href="https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/Deployment" target="_blank">Publica tu sitio - MDN</a></dd><br>
       <dt>Recursos adicionales:</dt>
       <div class="video-links">
-        <span class="add-inf"> | Consejos de MoureDev</span>
         <a href="https://www.youtube.com/watch?v=q55_DpQLGEU" target="_blank">Cómo crear tu portafolio web</a>
-        <a href="https://www.youtube.com/watch?v=0uf0yBJ2ixk" target="_blank">¿Cómo construir tu portafolio como programador?</a>
+        <span class="add-inf"> | Consejos de MoureDev</span><br>
+        <a href="https://www.youtube.com/watch?v=0uf0yBJ2ixk" target="_blank">¿Cómo construir tu portafolio como programador?</a><br>
         <a href="https://www.youtube.com/watch?v=7W6-jSOFMgM" target="_blank">Subir tu página a Netlify</a>
       </div>
     </dl>
@@ -214,6 +235,11 @@
     </ul>
     <p>🚀 ¡Sigue construyendo, equivocándote y aprendiendo! La práctica constante es tu mejor aliada.</p>
   </section>
+  <button id="back-to-top" class="back-to-top-btn floating-btn" aria-label="Volver arriba">
+    <svg class="arrow-icon" viewBox="0 0 24 24" width="24" height="24">
+      <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
   <script src="scripts/main.js"></script>
 </body>
 </html>
