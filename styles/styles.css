@@ -476,3 +476,36 @@ body.modo-oscuro .toggle-mode-btn:hover svg {
     padding-right: 0.5rem;
   }
 }
+
+@media (hover: hover) {
+  .floating-btn:hover,
+  .toggle-mode-btn:hover {
+    transform: scale(1.1);
+    background: var(--toggle-button-bg);
+    color: var(--toggle-btn-hover-icon);
+  }
+
+  body:not(.modo-oscuro) .floating-btn:hover,
+  body:not(.modo-oscuro) .toggle-mode-btn:hover {
+    background: #1e1e1e;
+    color: #ffffff;
+  }
+
+  body:not(.modo-oscuro) .floating-btn:hover svg,
+  body:not(.modo-oscuro) .toggle-mode-btn:hover svg {
+    stroke: #ffffff;
+    fill: #ffffff;
+  }
+
+  body.modo-oscuro .floating-btn:hover,
+  body.modo-oscuro .toggle-mode-btn:hover {
+    background: #ffffff;
+    color: #1e1e1e;
+  }
+
+  body.modo-oscuro .floating-btn:hover svg,
+  body.modo-oscuro .toggle-mode-btn:hover svg {
+    stroke: #1e1e1e;
+    fill: #1e1e1e;
+  }
+}
